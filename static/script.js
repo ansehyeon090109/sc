@@ -68,3 +68,17 @@ new Chart(ctx, {
         }
     }
 });
+
+// async function updateData() {
+//     try {
+//     const response = await fetch('/data');
+//     const data = await response.json();
+//     document.getElementById('value').innerText = data.arduino_data + " mA";
+//     } catch (error) {
+//     document.getElementById('value').innerText = "데이터를 불러오지 못했습니다.";
+//     }
+// }
+
+// // 1초마다 업데이트
+// setInterval(updateData, 1000);
+// updateData(); // 즉시 1회 실행
