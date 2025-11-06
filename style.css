@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f3f8ff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    width: 90%;
+    background: white;
+    border-radius: 12px;
+    margin: 20px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    background: #b2f2bb;
+    border-radius: 6px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.signup {
+    background: transparent;
+    color: #333;
+}
+
+.login {
+    background: #4a90ff;
+    color: white;
+}
+
+.menu {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu::before,
+.menu::after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+}
+
+.menu::before {
+    top: -8px; 
+}
+
+.menu::after {
+    top: 8px; 
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.top-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+.box {
+    background: white;
+    border-radius: 16px;
+    height: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.box1 {
+    background: white;
+    border-radius: 16px;
+    height: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 20px;
+}
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.chart {
+    flex: 1 1 600px;
+    height: 400px;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 250px;
+    gap: 20px;
+}
+
+.rank {
+    height: 400px;
+    padding: 20px;
+}
+
+/* ================== Profile Card Styles (.box1) ================== */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-img-container {
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #333;
+}
+
+.profile-stats-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-stats {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ccc; 
+    min-width: 70px;
+}
+
+.badge {
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.blue-badge {
+    background: #e6f0ff;
+    color: #4a90ff;
+}
+
+.green-badge {
+    background: #ebfff0;
+    color: #5cb85c;
+}
+
+/* ================== Rank Table Styles (.rank box) ================== */
+
+.rank-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.rank-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.rank-header, .rank-item {
+    display: grid;
+    grid-template-columns: 50px 70px 1fr 60px;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.rank-header {
+    color: #999;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+}
+
+.rank-item {
+    border-bottom: 1px solid #eee;
+}
+
+.rank-item:last-child {
+    border-bottom: none;
+}
+
+.rank-item > span {
+    text-align: left;
+}
+
+.col-point, .rank-point {
+    text-align: right;
+    font-weight: bold;
+}
+
+.rank-number {
+    font-weight: 600;
+    text-align: center;
+    color: #555;
+    padding: 5px 0;
+}
+
+.rank-number.highlight {
+    background: #e8ffe8;
+    color: #5cb85c;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 30px;
+    margin: 0 auto;
+}
+
+.rank-percent {
+    color: #999;
+}
+
+.rank-name {
+    font-weight: 600;
+    color: #333;
+}

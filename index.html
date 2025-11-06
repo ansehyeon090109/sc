@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo"></div>
+    <div class="nav-buttons">
+        <button class="signup">Sign Up</button>
+        <button class="login">Login</button>
+        <div class="menu"></div>
+    </div>
+    </header>
+
+    <main class="container">
+    <section class="top-boxes">
+        <div class="box"></div>
+        <div class="box1"></div>
+    </section>
+
+    <section class="bottom">
+        <div class="chart box">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="side">
+        <div class="rank box"></div>
+        </div>
+    </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

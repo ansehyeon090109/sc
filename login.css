@@ -1,0 +1,19 @@
+body {
+    background-image: url("로그인 배경이미지.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login_box {
+    margin-left: 800px;
+    align-content: center;
+    width: 600px;
+    height: 700px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    line-height: normal;
+}
