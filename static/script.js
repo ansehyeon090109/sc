@@ -1,5 +1,7 @@
 const ctx = document.getElementById('myChart').getContext('2d');
 
+const data_list = [];
+
 new Chart(ctx, {
     type: 'line',
     data: {
@@ -69,13 +71,19 @@ new Chart(ctx, {
     }
 });
 
+function GetData() {
+    for(let i = 0; i < 6; i++) {
+        console.log("test");
+    }
+}
+
 async function updateData() {
     try {
-    const response = await fetch('/data');
-    const data = await response.json();
-    document.getElementById('value').innerText = data.arduino_data + " mA";
+        const response = await fetch('/data');
+        const data = await response.json();
+        document.getElementById('value').innerText = data.arduino_data + " mA";
     } catch (error) {
-    document.getElementById('value').innerText = "데이터를 불러오지 못했습니다.";
+        document.getElementById('value').innerText = "데이터를 불러오지 못했습니다.";
     }
 
     // 1초마다 업데이트
