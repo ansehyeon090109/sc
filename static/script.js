@@ -2,25 +2,16 @@ const ctx = document.getElementById('myChart').getContext('2d');
 
 const data_list = [];
 
-new Chart(ctx, {
+const reload = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: data_list,
+        labels: ['0.5s', '1.0s', '1.5s', '2.0s', '2.5s', '3.0s'],
         datasets: [
             {
                 label: 'Revenue',
-                data: [4500, 6000, 4500, 5000, 4800, 6500],
+                data: data_list,
                 borderColor: '#00B0FF',
                 backgroundColor: 'rgba(0, 180, 255, 0.2)',
-                fill: true,
-                tension: 0.4,
-                pointRadius: 0,
-            },
-            {
-                label: 'Net Income',
-                data: [1000, 3000, 2000, 2500, 3500, 4000],
-                borderColor: '#00FF96',
-                backgroundColor: 'rgba(0, 255, 160, 0.2)',
                 fill: true,
                 tension: 0.4,
                 pointRadius: 0,
@@ -49,14 +40,14 @@ new Chart(ctx, {
                     label: (context) => {
                         const label = context.dataset.label || '';
                         const value = context.parsed.y;
-                        return `${label}: ${value / 1000}K`;
+                        return `${label}: ${value / 1}K`;
                     }
                 }
             }
         },
         scales: {
             x: {
-                ticks: { color: 'white' },
+                ticks: { color: 'black' },
                 grid: { display: false },
             },
             y: {
@@ -80,8 +71,10 @@ async function GetData() {
         try {
             // const response = await fetch('/data');
             // const data = await response.json();
-            data_list[i] = i;
+            // data_list.push(data);
+            data_list.push(i);
             console.log(data_list);
+            reload.update();
         } catch (error) {
             console.log(error);
         }
