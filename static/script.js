@@ -73,10 +73,10 @@ async function GetData() {
         try {
             const response = await fetch('/data');
             const data = await response.json();
-            temp.push(data);
+            temp.push(data['arduino_data']);
 
             reload.data.datasets[0].data = [...temp]; // 차트 데이터 갱신
-            console.log(temp);
+            console.log(data['arduino_data']);
             reload.update();
 
         } catch (error) {
