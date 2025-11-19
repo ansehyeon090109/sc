@@ -2,7 +2,7 @@ from flask import Flask, jsonify, render_template
 import serial
 
 app = Flask(__name__)
-ser = serial.Serial('/dev/cu.usbmodem1101', 9600)
+ser = serial.Serial('/dev/cu.usbmodem1301', 9600)
 
 @app.route('/')
 def index():

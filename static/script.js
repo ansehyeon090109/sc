@@ -1,6 +1,6 @@
 const ctx = document.getElementById('myChart').getContext('2d');
 
-const data_list = [];
+const data_list = [10, 5, -3, -10, 8];
 
 const reload = new Chart(ctx, {
     type: 'line',
@@ -67,18 +67,24 @@ function sleep(ms) {
 }
 
 async function GetData() {
+    const temp = [];
+
     for(let i = 0; i < 6; i++) {  
         try {
-            // const response = await fetch('/data');
-            // const data = await response.json();
-            // data_list.push(data);
-            data_list.push(i);
-            console.log(data_list);
+            const response = await fetch('/data');
+            const data = await response.json();
+            temp.push(data);
+
+            reload.data.datasets[0].data = [...temp]; // 차트 데이터 갱신
+            console.log(temp);
             reload.update();
+
         } catch (error) {
             console.log(error);
         }
 
         await sleep(500);
     }
+
+    reload.update();
 }
