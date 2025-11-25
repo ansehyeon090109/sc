@@ -91,7 +91,6 @@ button {
 .menu::before { top: -8px; }
 .menu::after { top: 8px; }
 
-/* ---------------- TOP BOXES ---------------- */
 .top-boxes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -106,7 +105,6 @@ button {
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* ---------------- BOTTOM LAYOUT ---------------- */
 .bottom {
     display: flex;
     flex-wrap: wrap;
@@ -131,7 +129,6 @@ button {
     padding: 15px;
 }
 
-/* ---------------- PROFILE + RANK (유지) ---------------- */
 .profile-card {
     display: flex;
     align-items: center;

@@ -2,6 +2,13 @@ from flask import Flask, jsonify, render_template, request, redirect, session
 import sqlite3
 import os
 import random
+from supabase import create_client, Client
+
+SUPABASE_URL = "https://XXXXXXX.supabase.co"
+SUPABASE_KEY = "YOUR_PUBLIC_ANON_KEY"
+
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
 
 app = Flask(__name__)
 app.secret_key = "secret123"
