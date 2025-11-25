@@ -4,11 +4,10 @@ import os
 import random
 from supabase import create_client, Client
 
-SUPABASE_URL = "https://XXXXXXX.supabase.co"
-SUPABASE_KEY = "YOUR_PUBLIC_ANON_KEY"
+SUPABASE_URL = "https://ktrurjresubcppberwis.supabase.co"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt0cnVyanJlc3ViY3BwYmVyd2lzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQwMzQ4NDUsImV4cCI6MjA3OTYxMDg0NX0.2K1n93-zseOvSU27KTnkAIyl5VGo7NibERubEnkdtRY"
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-
 
 app = Flask(__name__)
 app.secret_key = "secret123"
