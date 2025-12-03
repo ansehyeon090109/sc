@@ -24,7 +24,7 @@ def login():
             })
 
             # 로그인 성공
-            if result.user:
+            if result.user: 
                 session['user'] = result.user.email
                 return redirect('/')
             else:
