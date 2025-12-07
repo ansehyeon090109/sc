@@ -69,6 +69,19 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// function test() {
+//     data_list.push(1.3);
+//     sleep(0.5);
+//     data_list.push(1.3);
+//     sleep(0.5);
+//     data_list.push(1.3);
+//     sleep(0.5);
+//     data_list.push(1.3);
+//     sleep(0.5);
+//     data_list.push(1.3);
+//     sleep(0.5);
+// }
+
 async function GetData() {
     data_list.length = 0;
 
